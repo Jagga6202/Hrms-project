@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/apply_leave"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E3F2FD"
+    android:orientation="vertical" >
+
+    <!-- layout for other options i.e. approve leave etc. -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_toRightOf="@+id/apply_leave_options" >
+
+        <RelativeLayout
+            android:id="@+id/apply_leave_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="7dp"
+            android:background="@drawable/big_border" >
+
+            <RelativeLayout
+                android:id="@+id/apply_leave_layout_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:gravity="center"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/apply_leave_heading_apply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Apply "
+                    android:textColor="#616161"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/apply_leave_heading_leave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/apply_leave_heading_apply"
+                    android:text="Leave"
+                    android:textColor="#EB6B4E"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_summary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/apply_leave_layout_heading"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/border"
+                android:elevation="10dp"
+                android:padding="5dp" >
+
+                <TextView
+                    android:id="@+id/summary_heading_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Leave Summary "
+                    android:textColor="#616161"
+                    android:textSize="20dp" />
+
+                <RelativeLayout
+                    android:id="@+id/leave_table"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/summary_heading_txt"
+                    android:layout_marginTop="7dp" >
+
+                    <TextView
+                        android:id="@+id/leaves_type_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:text="Leaves Type"
+                        android:textColor="#616161"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:id="@+id/carried_over_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_toRightOf="@+id/leaves_type_txt"
+                        android:text="Carried Over"
+                        android:textColor="#616161"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:id="@+id/leave_entitled_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_toRightOf="@+id/carried_over_txt"
+                        android:text="Entitled"
+                        android:textColor="#616161"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:id="@+id/leave_taken_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_toRightOf="@+id/leave_entitled_txt"
+                        android:text="Taken"
+                        android:textColor="#616161"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:id="@+id/leave_balance_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_toRightOf="@+id/leave_taken_txt"
+                        android:text="Balance"
+                        android:textColor="#616161"
+                        android:textSize="10dp" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/margin"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/leave_table"
+                    android:background="#616161" />
+
+                <ListView
+                    android:id="@+id/leves_data_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_below="@+id/margin" >
+                </ListView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_emp_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_summary"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/border"
+                android:elevation="10dp" >
+
+                <!-- layout for Employee info heading starts -->
+
+                <RelativeLayout
+                    android:id="@+id/info_heading_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:id="@+id/info_heading_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Employee Information "
+                        android:textColor="#EB6B4E"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+                <!-- layout for Employee info heading ends -->
+
+
+                <!-- textview for employee code starts -->
+
+                <RelativeLayout
+                    android:id="@+id/ecode_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/info_heading_layout"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="7dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2" >
+
+                    <TextView
+                        android:id="@+id/ecode_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_weight="1"
+                        android:text="Employee Code:"
+                        android:textColor="#616161"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/ecode_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:layout_alignParentRight="true"
+                        android:text="_____"
+                        android:textColor="#616161"
+                        android:textSize="12dp" />
+                </RelativeLayout>
+                <!-- textview for employee code ends -->
+
+
+                <!-- textview for employee name starts -->
+
+                <LinearLayout
+                    android:id="@+id/ename_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ecode_layout"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="7dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2" >
+
+                    <TextView
+                        android:id="@+id/ename_txt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="1"
+                        android:text="Employee Name:"
+                        android:textColor="#616161"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/ename_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/ename_txt"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:text="_____"
+                        android:textColor="#616161"
+                        android:textSize="12dp" />
+                </LinearLayout>
+                <!-- textview for employee name ends -->
+
+
+                <!-- textview for employee department starts -->
+
+                <LinearLayout
+                    android:id="@+id/edeptt_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ename_layout"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="7dp"
+                    android:weightSum="2" >
+
+                    <TextView
+                        android:id="@+id/edeptt_txt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="1"
+                        android:text="Employee Department:"
+                        android:textColor="#616161"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/edeptt_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/edeptt_txt"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:text="_____"
+                        android:textColor="#616161"
+                        android:textSize="12dp" />
+                </LinearLayout>
+                <!-- textview for employee department ends -->
+
+
+                <!-- textview for employee designation starts -->
+
+                <LinearLayout
+                    android:id="@+id/edesignation_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edeptt_layout"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="7dp"
+                    android:weightSum="2" >
+
+                    <TextView
+                        android:id="@+id/edesignation_txt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="1"
+                        android:text="Employee Designation:"
+                        android:textColor="#616161"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/edesignation_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_toRightOf="@+id/edesignation_txt"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:text="_____"
+                        android:textColor="#616161"
+                        android:textSize="12dp" />
+                </LinearLayout>
+                <!-- textview for employee designation ends -->
+
+
+                <!-- textview for Leave type starts -->
+
+                <LinearLayout
+                    android:id="@+id/ltype_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edesignation_layout"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="7dp"
+                    android:weightSum="2" >
+
+                    <TextView
+                        android:id="@+id/ltype_txt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="1"
+                        android:text="Leave Type:"
+                        android:textColor="#616161"
+                        android:textSize="12dp" />
+
+                    <Spinner
+                        android:id="@+id/ltype_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_toRightOf="@+id/ltype_txt"
+                        android:layout_weight="1"
+                        android:spinnerMode="dropdown" />
+                </LinearLayout>
+                <!-- textview for leave type ends -->
+
+
+                <!-- textview for start date starts -->
+
+                <LinearLayout
+                    android:id="@+id/start_date_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ltype_layout"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="7dp"
+                    android:weightSum="10" >
+
+                    <TextView
+                        android:id="@+id/start_date_txt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="5"
+                        android:text="From:"
+                        android:textColor="#616161"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/start_date_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/start_date_txt"
+                        android:layout_weight="4"
+                        android:text="__________"
+                        android:textColor="#616161" />
+
+                    <ImageView
+                        android:id="@+id/calendar_icon"
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/calendar"
+                        android:paddingRight="10dp"
+                        android:paddingTop="5dp" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/from_ltype_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/start_date_layout"
+                    android:layout_marginTop="5dp" >
+
+                    <Spinner
+                        android:id="@+id/from_ltype_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_marginLeft="153dp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/end_date_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/from_ltype_layout"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="7dp"
+                    android:weightSum="10" >
+
+                    <TextView
+                        android:id="@+id/end_date_txt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="5"
+                        android:text="To:"
+                        android:textColor="#616161"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/end_date_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/end_date_txt"
+                        android:layout_weight="4"
+                        android:text="__________"
+                        android:textColor="#616161" />
+
+                    <ImageView
+                        android:id="@+id/calendar_img"
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/calendar"
+                        android:paddingRight="10dp"
+                        android:paddingTop="5dp" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/to_ltype_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/end_date_layout"
+                    android:layout_marginTop="5dp" >
+
+                    <Spinner
+                        android:id="@+id/to_ltype_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_marginLeft="153dp" />
+                </RelativeLayout>
+
+                <!-- textview for end date ends -->
+
+                <LinearLayout
+                    android:id="@+id/total_days_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/to_ltype_layout"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="7dp"
+                    android:weightSum="2" >
+
+                    <TextView
+                        android:id="@+id/total_days_txt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="1"
+                        android:text="No of Days:"
+                        android:textColor="#616161"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/total_days_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="1"
+                        android:text="---------"
+                        android:textColor="#616161"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/leave_reason_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/total_days_layout"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="7dp"
+                    android:weightSum="2" >
+
+                    <TextView
+                        android:id="@+id/leave_reason_txt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="1"
+                        android:text="Reason of Leave:"
+                        android:textColor="#616161"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/leave_reason_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="1"
+                        android:text="Reason of leave"
+                        android:textColor="#616161"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/address_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/leave_reason_layout"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="7dp"
+                    android:weightSum="2" >
+
+                    <TextView
+                        android:id="@+id/address_txt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="1"
+                        android:text="Address:"
+                        android:textColor="#616161"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/address_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="1"
+                        android:text="Address during leave"
+                        android:textColor="#616161"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/contact_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/address_layout"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="7dp"
+                    android:weightSum="2" >
+
+                    <TextView
+                        android:id="@+id/contact_txt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="1"
+                        android:text="Contact No:"
+                        android:textColor="#616161"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/contact_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="1"
+                        android:text="Contact No. during leave"
+                        android:textColor="#616161"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/incharge_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/contact_layout"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="7dp"
+                    android:weightSum="2" >
+
+                    <TextView
+                        android:id="@+id/incharge_txt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="1"
+                        android:text="Person Incharge"
+                        android:textColor="#616161"
+                        android:textSize="12dp" />
+
+                    <Spinner
+                        android:id="@+id/incharge_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="1"
+                        android:spinnerMode="dropdown" />
+                </LinearLayout>
+
+                <!-- Layout ends for employee information -->
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+    <!-- Main Frame Layout ends -->
+
+</RelativeLayout>

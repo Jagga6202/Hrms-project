@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_view_attendance_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E3F2FD"
+        android:paddingBottom="5dp" >
+
+        <TextView
+            android:id="@+id/view_Timesheet_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Timesheet"
+            android:textColor="#EB6B4E"
+            android:textSize="22dp"
+            android:textStyle="bold" />
+
+       
+
+        <RelativeLayout
+            android:id="@+id/view_attendance"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/view_Timesheet_txt"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/big_border" >
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/view_attendance_heading1_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="Attendance "
+                    android:textSize="22dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/view_attendance_heading2_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/view_attendance_heading1_txt"
+                    android:text=" Sheet"
+                    android:textColor="#EB6B4E"
+                    android:textSize="22dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/view_attendance_work_duration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayout1"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/border"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/view_attendance_work_duration_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Work Duration"
+                    android:textColor="#EB6B4E"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/view_attendance_total_working_hrs_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/view_attendance_work_duration_txt"
+                    android:layout_marginTop="5dp"
+                    android:text="Total Working Hrs"
+                    android:textColor="#424242"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/view_attendance_total_working_hrs_value_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/view_attendance_work_duration_txt"
+                    android:layout_marginTop="5dp"
+                    android:text="116:37"
+                    android:textColor="#424242"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/view_attendance_last_week_working_hrs_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/view_attendance_total_working_hrs_txt"
+                    android:layout_marginTop="5dp"
+                    android:text="Last Week Working Hrs"
+                    android:textColor="#424242"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/view_attendance_last_week_working_hrs_value_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/view_attendance_total_working_hrs_value_txt"
+                    android:layout_marginTop="5dp"
+                    android:text="43:41"
+                    android:textColor="#424242"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/view_attendance_current_week_working_hrs_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/view_attendance_last_week_working_hrs_txt"
+                    android:layout_marginTop="5dp"
+                    android:text="Current Week Working Hrs"
+                    android:textColor="#424242"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/view_attendance_current_week_working_hrs_value_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/view_attendance_last_week_working_hrs_value_txt"
+                    android:layout_marginTop="5dp"
+                    android:text="30:49"
+                    android:textColor="#424242"
+                    android:textSize="15dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/shift_information"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_attendance_work_duration"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:paddingBottom="10dp" >
+
+                <TextView
+                    android:id="@+id/view_attendance_work_time_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="Work Shift Time Information"
+                    android:textColor="#EB6B4E"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/view_attendance_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/view_attendance_work_time_info"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Title:"
+                    android:textColor="#424242"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/view_attendance_title_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/view_attendance_work_time_info"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Ritesh Kumar Singh"
+                    android:textColor="#424242"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/view_attendance_emp_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/view_attendance_title"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Employee Code:"
+                    android:textColor="#424242"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/view_attendance_emp_code_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/view_attendance_title"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="44932"
+                    android:textColor="#424242"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/view_attendance_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/view_attendance_emp_code"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Month:"
+                    android:textColor="#424242"
+                    android:textSize="15dp" />
+
+                <Spinner
+                    android:id="@+id/view_attendance_month_spn"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/view_attendance_emp_code_txt"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="15dp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/time_schedule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/shift_information"
+                android:gravity="center"
+                android:text="Time Schedule"
+                android:textColor="#EB6B4E"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <HorizontalScrollView
+                android:id="@+id/horizontal_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/time_schedule"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <TableLayout
+                        android:id="@+id/attendance_tbl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:layout_width="205dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:layout_marginRight="-2dp"
+                                android:background="@drawable/outline"
+                                android:paddingBottom="15dp"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="5dp"
+                                android:paddingTop="15dp"
+                                android:text="Work Day"
+                                android:textColor="#ffffff" />
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="2"
+                                android:layout_marginRight="-2dp"
+                                android:background="@drawable/outline"
+                                android:paddingBottom="15dp"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="5dp"
+                                android:paddingTop="15dp"
+                                android:text="Total Hrs"
+                                android:textColor="#ffffff" />
+
+                            <TableLayout
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content" >
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="3"
+                                    android:background="@drawable/outline"
+                                    android:paddingBottom="3dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingTop="3dp"
+                                    android:text="Punch Time Details"
+                                    android:textColor="#FFFFFF" />
+
+                                <TableRow
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/outline" >
+
+                                    <TextView
+                                        android:layout_width="75dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_column="1"
+                                        android:layout_marginRight="-2dp"
+                                        android:layout_marginTop="-2dp"
+                                        android:background="@drawable/outline"
+                                        android:paddingBottom="3dp"
+                                        android:paddingLeft="10dp"
+                                        android:paddingTop="3dp"
+                                        android:text="In"
+                                        android:textColor="#FFFFFF" />
+
+                                    <TextView
+                                        android:layout_width="75dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="-2dp"
+                                        android:background="@drawable/outline"
+                                        android:paddingBottom="3dp"
+                                        android:paddingLeft="10dp"
+                                        android:paddingTop="3dp"
+                                        android:text="Out"
+                                        android:textColor="#FFFFFF" />
+                                </TableRow>
+                            </TableLayout>
+
+                            <TableLayout
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="-2dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/outline" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="4"
+                                    android:background="@drawable/outline"
+                                    android:paddingBottom="3dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingTop="3dp"
+                                    android:text="System Hours"
+                                    android:textColor="#FFFFFF" />
+
+                                <TableRow
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/outline" >
+
+                                    <TextView
+                                        android:layout_width="75dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_column="1"
+                                        android:layout_marginRight="-2dp"
+                                        android:layout_marginTop="-2dp"
+                                        android:background="@drawable/outline"
+                                        android:paddingBottom="3dp"
+                                        android:paddingLeft="10dp"
+                                        android:paddingTop="3dp"
+                                        android:text="From"
+                                        android:textColor="#FFFFFF" />
+
+                                    <TextView
+                                        android:layout_width="75dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_column="1"
+                                        android:layout_marginTop="-2dp"
+                                        android:background="@drawable/outline"
+                                        android:paddingBottom="3dp"
+                                        android:paddingLeft="10dp"
+                                        android:paddingTop="3dp"
+                                        android:text="To"
+                                        android:textColor="#FFFFFF" />
+                                </TableRow>
+                            </TableLayout>
+                        </TableRow>
+                    </TableLayout>
+
+                    <ListView
+                        android:id="@+id/view_attendance_adapter_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp" >
+                    </ListView>
+                </LinearLayout>
+            </HorizontalScrollView>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</ScrollView>

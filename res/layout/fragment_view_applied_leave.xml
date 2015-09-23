@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_view_attendance_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E3F2FD"
+    android:padding="10dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp"
+        android:background="@drawable/big_border"
+         >
+
+        <TextView
+            android:id="@+id/applied_leave_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/outline"
+            android:paddingBottom="15dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:paddingTop="15dp"
+            android:text="Applied Leaves"
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
+
+        <HorizontalScrollView
+            android:id="@+id/horizontal_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/applied_leave_txt"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/outline_dark" >
+
+                <TableLayout
+                    android:id="@+id/attendance_tbl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/employee_id_txt"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:layout_marginRight="-2dp"
+                            android:background="@drawable/outline_dark"
+                            android:padding="3dp"
+                            android:text="Employee Id"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/employee_name_txt"
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="2"
+                            android:layout_marginRight="-2dp"
+                            android:background="@drawable/outline_dark"
+                            android:padding="3dp"
+                            android:text="Employee Name"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/levae_type_txt"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="3"
+                            android:layout_marginRight="-2dp"
+                            android:background="@drawable/outline_dark"
+                            android:padding="3dp"
+                            android:text="Leave Type"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/levae_from_txt"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="4"
+                            android:layout_marginRight="-2dp"
+                            android:background="@drawable/outline_dark"
+                            android:padding="3dp"
+                            android:text="Leave From"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/levae_to_txt"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="4"
+                            android:layout_marginRight="-2dp"
+                            android:background="@drawable/outline_dark"
+                            android:padding="3dp"
+                            android:text="Leave To"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_days_txt"
+                            android:layout_width="75dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="4"
+                            android:layout_marginRight="-2dp"
+                            android:background="@drawable/outline_dark"
+                            android:padding="3dp"
+                            android:text="Total Days"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/requested_on_txt"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="4"
+                            android:layout_marginRight="-2dp"
+                            android:background="@drawable/outline_dark"
+                            android:padding="3dp"
+                            android:text="Requested On"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/leave_status_txt"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="4"
+                            android:layout_marginRight="-2dp"
+                            android:background="@drawable/outline_dark"
+                            android:padding="3dp"
+                            android:text="Leave Status"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/action_txt"
+                            android:layout_width="75dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="4"
+                            android:layout_marginRight="-2dp"
+                            android:background="@drawable/outline_dark"
+                            android:padding="3dp"
+                            android:text="Action"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+                    </TableRow>
+                </TableLayout>
+
+                <ListView
+                    android:id="@+id/applied_leave_adapter_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_below="@+id/attendance_tbl" >
+                </ListView>
+            </RelativeLayout>
+        </HorizontalScrollView>
+
+        <RelativeLayout
+            android:id="@+id/applied_leave_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/horizontal_scroll"
+            android:background="@drawable/outline_dark"
+            android:padding="2dp" 
+            android:layout_marginTop="-2dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            
+            >
+
+            <Spinner
+                android:id="@+id/applied_leave_spinner"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_height="50dp" />
+        </RelativeLayout>
+        
+        <Button
+                android:id="@+id/cancle_leave_btn"
+                android:layout_below="@+id/applied_leave_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/button_default_bg"
+                android:padding="15dp"
+                android:textColor="#ffffff"
+                android:text="Cancel Leave" />
+    </RelativeLayout>
+
+</ScrollView>

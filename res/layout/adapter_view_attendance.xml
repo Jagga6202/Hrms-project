@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+<TableLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/view_attendance_work_days_txt"
+            android:layout_width="205dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_marginRight="-2dp"
+            android:background="@drawable/outline_dark"
+            android:paddingBottom="3dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:paddingTop="3dp"
+            android:text="09 Sep 2015 - Wednesday"
+            android:textColor="#616161" />
+
+        <TextView
+            android:id="@+id/view_attendance_total_hours_txt"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_marginRight="-2dp"
+            android:background="@drawable/outline_dark"
+            android:paddingBottom="3dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:paddingTop="3dp"
+            android:text="08:32"
+            android:textColor="#616161" />
+
+        <TextView
+            android:id="@+id/view_attendance_in_txt"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_column="3"
+            android:layout_marginRight="-2dp"
+            android:background="@drawable/outline_dark"
+            android:paddingBottom="3dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="3dp"
+            android:text="09:45:07"
+            android:textColor="#616161" />
+
+        <TextView
+            android:id="@+id/view_attendance_out_txt"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_column="4"
+            android:background="@drawable/outline_dark"
+            android:paddingBottom="3dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="3dp"
+            android:text="18:17:58"
+            android:textColor="#616161" />
+
+        <TextView
+            android:id="@+id/view_attendance_from_txt"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_column="5"
+            android:layout_marginRight="-2dp"
+            android:background="@drawable/outline_dark"
+            android:paddingBottom="3dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="3dp"
+            android:text="09:41:29"
+            android:textColor="#616161" />
+
+        <TextView
+            android:id="@+id/view_attendance_to_txt"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_column="6"
+            android:background="@drawable/outline_dark"
+            android:paddingBottom="3dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="3dp"
+            android:text="18:07:49"
+            android:textColor="#616161" />
+    </TableRow>
+</TableLayout>
+</RelativeLayout>

@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/imgrelative"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:background="#f3a694"
+                android:padding="10dp"
+                android:elevation="10dp" >
+
+                <TextView
+                    android:id="@+id/nametxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:scaleType="fitCenter"
+                    android:text="Ritesh Kumar Singh"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp" />
+
+                <ImageView
+                    android:id="@+id/imageview"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_below="@+id/nametxt"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/boy" />
+
+                <Button
+                    android:id="@+id/upload_btn"
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/imageview"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/button_default_bg"
+                    android:text="UPLOAD" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_employee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgrelative"
+                android:elevation="4dp" >
+
+                <TextView
+                    android:id="@+id/employee_textview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#EB6B4E"
+                    android:padding="6dp"
+                    android:text="Employee Information"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/employee_role_lbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/employee_textview"
+                    android:layout_margin="12dp"
+                    android:text="Employee Role:"
+                    android:textColor="#817D7D"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/employee_role_txt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/employee_textview"
+                    android:layout_margin="12dp"
+                    android:layout_toRightOf="@+id/employee_role_lbl"
+                    android:text="Executive QA"
+                    android:gravity="right"
+                    android:textColor="#000000"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/employee_department_lbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/employee_role_lbl"
+                    android:layout_margin="12dp"
+                    android:text="Employee Department:"
+                    android:textColor="#817D7D"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/employee_department_txt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/employee_role_txt"
+                    android:layout_margin="12dp"
+                    android:layout_toRightOf="@+id/employee_department_lbl"
+                    android:text="Software Development"
+                    android:gravity="right"
+                    android:textColor="#000000"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/employee_shift_lbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/employee_department_lbl"
+                    android:layout_margin="12dp"
+                    android:text="Employee shift:"
+                    android:textColor="#817D7D"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/employee_shift_txt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/employee_department_txt"
+                    android:layout_margin="12dp"
+                    android:layout_toRightOf="@+id/employee_shift_lbl"
+                    android:text="IST"
+                    android:gravity="right"
+                    android:textColor="#000000"
+                    android:textSize="14dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_emplyee_info"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relative_employee"
+                android:layout_marginTop="10dp"
+                android:elevation="4dp" >
+
+                <TextView
+                    android:id="@+id/employee_info_txt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:background="#EB6B4E"
+                    android:padding="6dp"
+                    android:text="Employee User Information"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/employee_code_lbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/employee_info_txt"
+                    android:layout_margin="12dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Employee Code:"
+                    android:textColor="#817D7D"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/employee_code_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_below="@+id/employee_info_txt"
+                    android:layout_margin="12dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/employee_code_lbl"
+                    android:text="44932"
+                    android:textColor="#000000"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/date_of_joining_lbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/employee_code_lbl"
+                    android:layout_margin="12dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Date of Joining:"
+                    android:textColor="#817D7D"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/date_of_joining_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/employee_code_txt"
+                    android:layout_margin="12dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/date_of_joining_lbl"
+                    android:text="Date:"
+                    android:textColor="#000000"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/employee_email_lbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/date_of_joining_lbl"
+                    android:layout_margin="12dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Employee Email:"
+                    android:textColor="#817D7D"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/employee_email_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/date_of_joining_txt"
+                    android:layout_margin="12dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/employee_email_lbl"
+                    android:text="Email:"
+                    android:textColor="#000000"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/employee_official_email_lbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/employee_email_lbl"
+                    android:layout_margin="12dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Official Email:"
+                    android:textColor="#817D7D"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/employee_official_email_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/employee_email_txt"
+                    android:layout_margin="12dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/employee_official_email_lbl"
+                    android:text="Email:"
+                    android:textColor="#000000"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/employee_contact_number_lbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/employee_official_email_lbl"
+                    android:layout_margin="12dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Personal Contact Number:"
+                    android:textColor="#817D7D"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/employee_contact_number_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/employee_official_email_txt"
+                    android:layout_margin="12dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/employee_contact_number_lbl"
+                    android:text="Number"
+                    android:textColor="#000000"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/employee_official_contact_number_lbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/employee_contact_number_lbl"
+                    android:layout_margin="12dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Official Contact Number:"
+                    android:textColor="#817D7D"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/employee_official_contact_number_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/employee_contact_number_txt"
+                    android:layout_margin="12dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/employee_official_contact_number_lbl"
+                    android:text="Number"
+                    android:textColor="#000000"
+                    android:textSize="14dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_employee_reporting"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relative_emplyee_info"
+                android:elevation="2dp" >
+
+                <TextView
+                    android:id="@+id/employee_reporting_txtview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#EB6B4E"
+                    android:padding="6dp"
+                    android:text="Employee Reporting"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/reporting_to_lbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/employee_reporting_txtview"
+                    android:layout_margin="12dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Reporting To:"
+                    android:textColor="#817D7D"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/reporting_to_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/employee_reporting_txtview"
+                    android:layout_margin="12dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/reporting_to_lbl"
+                    android:text="to"
+                    android:textColor="#000000"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/reporting_to_person_name_lbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/reporting_to_lbl"
+                    android:layout_margin="12dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Reporting to Person Name:"
+                    android:textColor="#817D7D"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/reporting_to_person_name_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/reporting_to_txt"
+                    android:layout_margin="12dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/reporting_to_person_name_lbl"
+                    android:text="Name"
+                    android:textColor="#000000"
+                    android:textSize="14dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_employee_additional_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relative_employee_reporting" >
+
+                <RelativeLayout
+                    android:id="@+id/employee_info1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:background="#EB6B4E" >
+
+                    <TextView
+                        android:id="@+id/employee_addtional_info_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:background="#EB6B4E"
+                        android:text="Employee Additional Information"
+                        android:textColor="#ffffff"
+                        android:textSize="20dp" />
+
+                    <ImageView
+                        android:id="@+id/imagevieww"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:layout_toRightOf="@+id/employee_addtional_info_tv"
+                        android:background="@drawable/icon_edit_pencil" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relative_employee_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/employee_info1"
+                    android:layout_margin="12dp" >
+
+
+                    <TextView
+                        android:id="@+id/father_name_lbl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:text="Father&apos;s Name:"
+                        android:textColor="#817D7D"
+                        android:textSize="16dp" />
+
+                    <EditText
+                        android:id="@+id/father_name_edt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:layout_toRightOf="@+id/father_name_lbl"
+                        android:text="Name"
+                        android:textColor="#000000"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/mother_name_lbl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/father_name_lbl"
+                        android:layout_margin="12dp"
+                        android:text="Mother&apos;s Name"
+                        android:textColor="#817D7D"
+                        android:textSize="16dp" />
+
+                    <EditText
+                        android:id="@+id/mother_name_edt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/father_name_edt"
+                        android:layout_margin="12dp"
+                        android:layout_toRightOf="@+id/mother_name_lbl"
+                        android:text="MName"
+                        android:textColor="#000000"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/date_of_birth_lbl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/mother_name_lbl"
+                        android:layout_margin="12dp"
+                        android:text="Date Of Birth:"
+                        android:textColor="#817D7D"
+                        android:textSize="16dp" />
+
+                    <EditText
+                        android:id="@+id/date_of_birth_edt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/mother_name_edt"
+                        android:layout_toRightOf="@+id/date_of_birth_lbl"
+                        android:text="DOB"
+                        android:textColor="#000000"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/sex_lbl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/date_of_birth_lbl"
+                        android:layout_margin="12dp"
+                        android:text="Sex:"
+                        android:textColor="#817D7D"
+                        android:textSize="16dp" />
+
+                    <EditText
+                        android:id="@+id/sex_edt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/date_of_birth_edt"
+                        android:layout_toRightOf="@+id/sex_lbl"
+                        android:text="female"
+                        android:textColor="#000000"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/current_address_lbl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/sex_lbl"
+                        android:layout_margin="12dp"
+                        android:text="Current Address"
+                        android:textColor="#817D7D"
+                        android:textSize="16dp" />
+
+                    <EditText
+                        android:id="@+id/current_address_edt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/sex_edt"
+                        android:layout_toRightOf="@+id/current_address_lbl"
+                        android:text="address"
+                        android:textColor="#000000"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/current_city_lbl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/current_address_lbl"
+                        android:layout_margin="12dp"
+                        android:text="Current City"
+                        android:textColor="#817D7D"
+                        android:textSize="16dp" />
+
+                    <EditText
+                        android:id="@+id/current_city_edt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/current_address_edt"
+                        android:layout_toRightOf="@+id/current_city_lbl"
+                        android:text="city"
+                        android:textColor="#000000"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/permanent_address_lbl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/current_city_lbl"
+                        android:layout_margin="12dp"
+                        android:text="Permanent Address"
+                        android:textColor="#817D7D"
+                        android:textSize="16dp" />
+
+                    <EditText
+                        android:id="@+id/permanent_add_edt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/current_city_edt"
+                        android:layout_toRightOf="@+id/permanent_address_lbl"
+                        android:text="address"
+                        android:textColor="#000000"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/permanent_city_lbl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/permanent_address_lbl"
+                        android:layout_margin="12dp"
+                        android:text="Permanent City"
+                        android:textColor="#817D7D"
+                        android:textSize="16dp" />
+
+                    <EditText
+                        android:id="@+id/permanent_city_edt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/permanent_add_edt"
+                        android:layout_toRightOf="@+id/permanent_city_lbl"
+                        android:text="city"
+                        android:textColor="#000000"
+                        android:textSize="14dp" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
